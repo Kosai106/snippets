@@ -1,7 +1,7 @@
 const Regex = {
   keyword: /(\"(.*)\"):/g,
   operator: /(\:|\,|\{|\}|\[|\])/g,
-  string: /(\[([^\]]+)]|(\"(.*)\"(\,)?))/g,
+  string: /(\"(.*)\")(?!:)/g,
   number: /((?!\S*\")\d+(\.\d+)?)/g,
   highlight: /(<em>(.*)<\/em>)/g,
   boolean: /(true|false)/g,

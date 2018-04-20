@@ -5,8 +5,8 @@ const content = JSON.stringify(data, null, 2)
 
 const codes = content
   .replace(Regex.number, '<span data-highlight-number>$1</span>')
-  .replace(Regex.keyword, '<span data-highlight-string>$1</span>:')
-  .replace(Regex.string, '<span data-highlight-keyword>$1</span>')
+  .replace(Regex.string, '<span data-highlight-string>$1</span>')
+  .replace(Regex.keyword, '<span data-highlight-keyword>$1</span>:')
   .replace(
     Regex.highlight,
     '<span data-highlight-match>&lt;em&gt;$1&lt;/em&gt;</span>'
