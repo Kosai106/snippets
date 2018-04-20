@@ -1,0 +1,50 @@
+$themes: (
+  light:
+    (
+      name: 'light',
+      colors:
+        (
+          code-bg: #282c34,
+          keyword: #00aaff,
+          operator: #f95faa,
+          property: #75de00,
+          variable: #eeba00,
+          number: #eeba00,
+          string: #75de00,
+          boolean: #eeba00,
+          comment: #bbbbbb
+        )
+    ),
+  dark:
+    (
+      name: 'dark',
+      colors:
+        (
+          code-bg: #272c35,
+          keyword: #f06372,
+          operator: #da985c,
+          property: #38292a,
+          variable: #d19a66,
+          number: #da985c,
+          string: #8bc66f,
+          boolean: #da985c,
+          comment: #bbbbbb
+        )
+    ),
+  test:
+    (
+      name: 'test',
+      colors:
+        (
+          code-bg: white,
+          keyword: red,
+          operator: green,
+          property: Chocolate,
+          variable: olivedrab,
+          number: hotpink,
+          string: blue,
+          boolean: purple,
+          comment: black
+        )
+    )
+);

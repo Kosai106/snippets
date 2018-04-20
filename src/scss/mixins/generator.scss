@@ -1,0 +1,27 @@
+@mixin classGenerator($theme) {
+  code[data-highlight-theme='#{$theme}'] {
+    unicode-bidi: embed;
+    white-space: pre;
+    font-size: 16px;
+    font-family: Menlo, Monaco, 'Courier New', monospace;
+    line-height: 1.25rem;
+
+    @each $label, $map in $themes {
+      @if ($theme == $label) {
+        @each $keyword, $colors in $map {
+          @each $name, $color in $colors {
+            @if ($name == 'comment') {
+              color: $color;
+            }
+            @if ($name == 'code-bg') {
+              background-color: $color;
+            }
+            span[data-highlight-#{$name}] {
+              color: $color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

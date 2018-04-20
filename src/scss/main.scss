@@ -1,0 +1,19 @@
+@import 'config/themes';
+@import 'mixins/generator';
+
+body {
+  background-color: #282c34;
+}
+
+.container {
+  display: flex;
+  max-width: 980px;
+  min-height: 100vh;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+@each $label, $map in $themes {
+  @include classGenerator($label);
+}
